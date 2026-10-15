@@ -1,0 +1,4 @@
+# Mantiene los saltos de línea de Linux en los scripts (evita errores en Docker al trabajar en Windows)
+*.sh text eol=lf
+Dockerfile text eol=lf
+* text=auto

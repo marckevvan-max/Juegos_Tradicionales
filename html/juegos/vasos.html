@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vasos · Juega, Gana y Diviértete</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="../../css/juegos/vasos.css">
+<link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <a href="../menu.html#juegos" aria-label="Volver a Juegos">←</a>
+      <h1>Vasos</h1>
+      <a href="../menu.html#cuenta" aria-label="Cuenta"><img class="ico" src="../../img/usuario.png" alt="Cuenta"></a>
+    </header>
+    <div class="body">
+      <main id="main">
+        <p>Adivina en qué vaso quedó la pelota; cada ronda hay más vasos.</p>
+        <div class="info"><div>⏱️<br>2 min<br><small>Tiempo</small></div></div>
+        <div class="stage" id="st"><div class="portada"><img src="../../img/vasos.jpg" alt="Vasos"></div></div>
+        <p class="acciones"><label for="dif"><b>Dificultad:</b></label> <select id="dif"><option value="0">Fácil (×1 puntos)</option><option value="1" selected>Media (×1.5)</option><option value="2">Difícil (×2)</option></select></p>
+        <p class="acciones"><button class="btn" id="play">Jugar solo</button> <button class="btn o" id="online">Jugar en línea</button></p>
+        <p id="aviso" class="acciones" hidden><small>Inicia sesión en Cuenta para guardar tus puntos.</small></p>
+        <h2>Reglas</h2>
+        <ul class="rules"><li>Mira bajo qué vaso queda la pelota.</li><li>Cada ronda trae un vaso más: de 3 vasos en la ronda 1 a 7 en la ronda 5.</li><li>Los vasos se mezclan; en Difícil se mueven mucho más rápido.</li><li>Toca el vaso donde crees que está (5 rondas).</li><li>Solo: 3 puntos por acierto. En línea (5 jugadores): el primero que la encuentre gana 5, el segundo 3 y el tercero 1.</li></ul>
+      </main>
+    </div>
+  </div>
+  <script src="../../js/common.js"></script>
+  <script src="../../js/juegos/vasos.js"></script>
+</body>
+</html>

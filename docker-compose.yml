@@ -1,0 +1,42 @@
+# Para probar TODO en tu computadora con Docker (opcional):
+#   docker compose up --build
+#   Juego:        http://localhost:8080
+#   phpMyAdmin:   http://localhost:8081   (usuario: juegos · contraseña: juegos_pass)
+services:
+  web:
+    build: .
+    ports:
+      - "8080:10000"
+    environment:
+      PORT: "10000"
+      DB_HOST: db
+      DB_PORT: "3306"
+      DB_NAME: juegos_tradicionales
+      DB_USER: juegos
+      DB_PASS: juegos_pass
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:11
+    environment:
+      MARIADB_ROOT_PASSWORD: root_pass
+      MARIADB_DATABASE: juegos_tradicionales
+      MARIADB_USER: juegos
+      MARIADB_PASSWORD: juegos_pass
+    volumes:
+      - datos_mysql:/var/lib/mysql
+      # Se importa solo la primera vez que se crea el volumen
+      - ./database/estructura_y_datos.sql:/docker-entrypoint-initdb.d/01_estructura_y_datos.sql:ro
+
+  phpmyadmin:
+    image: phpmyadmin:5
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+    depends_on:
+      - db
+
+volumes:
+  datos_mysql:

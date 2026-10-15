@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Juega, Gana y Diviértete</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/paginas.css">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <button id="back" hidden aria-label="Volver">←</button>
+      <img id="flag" class="flag" src="../img/BanderaM.avif" alt="Bandera de México">
+      <h1 id="title">Juega, Gana y Diviértete</h1>
+      <button id="usr" aria-label="Cuenta"></button>
+    </header>
+
+    <div class="body">
+      <aside id="side">
+        <button data-s="menu"><b>☰</b>Menú</button>
+        <button data-s="online"><img src="../img/icononline.jpeg" alt="">online</button>
+        <button data-s="buscar"><img src="../img/buscar.png" alt="">buscar</button>
+        <button data-s="usuario"><img src="../img/usuario.png" alt="">usuario</button>
+        <button data-s="biblioteca"><img src="../img/biblioteca.png" alt="">Biblioteca</button>
+      </aside>
+      <main id="main"></main>
+    </div>
+
+    <nav>
+      <button data-v="home"><img src="../img/inicio.png" alt="">Inicio</button>
+      <button data-v="logros"><img src="../img/logros.png" alt="">Logros</button>
+      <button data-v="recomp"><img src="../img/recompensas.png" alt="">Recompensas</button>
+      <button data-v="config"><img src="../img/configuracion.png" alt="">Config.</button>
+    </nav>
+  </div>
+  <script src="../js/common.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

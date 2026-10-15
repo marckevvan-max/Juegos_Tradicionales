@@ -1,0 +1,22 @@
+/* Estilos de Escondidas: un campo con objetos para esconderse */
+.stage{background:#9fd37a;padding:0}
+.campo{position:relative;width:100%;aspect-ratio:1/1.02;overflow:hidden;
+ background:linear-gradient(#bfe6ff 0 22%,#7cc15f 22% 26%,#9fd37a 26% 100%)}
+.campo::before{content:"";position:absolute;right:8%;top:5%;width:12%;aspect-ratio:1;border-radius:50%;background:#ffd84a;box-shadow:0 0 0 6px rgba(255,216,74,.35)}
+.obj{position:absolute;transform:translate(-50%,-100%);background:none;border:0;padding:0;cursor:pointer;transition:transform .15s}
+.obj svg{width:100%;height:auto;display:block;pointer-events:none}
+.obj:hover:not(:disabled){transform:translate(-50%,-100%) scale(1.07)}
+.obj:disabled{cursor:default}
+.obj .tag{position:absolute;left:50%;top:-8px;transform:translateX(-50%);white-space:nowrap;font:bold 12px/1 sans-serif;background:#fff;border:2px solid #1d2a22;border-radius:12px;padding:3px 7px;color:#1d2a22;display:none}
+.obj .tag:not(:empty){display:block}
+.obj.found,.obj.mine{z-index:60!important}
+.obj.found svg{filter:drop-shadow(0 0 7px #ffd84a)}
+.obj.mine svg{filter:drop-shadow(0 0 7px #3f62c9)}
+.obj.empty svg{opacity:.5}
+.obj.wiggle{animation:wig .3s infinite alternate}
+@keyframes wig{from{transform:translate(-50%,-100%) rotate(-2.5deg)}to{transform:translate(-50%,-100%) rotate(2.5deg)}}
+.banner{position:absolute;left:50%;top:70px;transform:translate(-50%,-14px);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:80;
+ padding:8px 18px;border-radius:24px;font-weight:bold;white-space:nowrap;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+.banner.show{opacity:1;transform:translate(-50%,0)}
+.banner.ok{background:#006847;color:#fff}.banner.no{background:#555;color:#fff}
+@media (prefers-reduced-motion:reduce){.obj.wiggle{animation:none}}

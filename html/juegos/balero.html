@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Balero · Juega, Gana y Diviértete</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="../../css/juegos/balero.css">
+<link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <a href="../menu.html#juegos" aria-label="Volver a Juegos">←</a>
+      <h1>Balero</h1>
+      <a href="../menu.html#cuenta" aria-label="Cuenta"><img class="ico" src="../../img/usuario.png" alt="Cuenta"></a>
+    </header>
+    <div class="body">
+      <main id="main">
+        <p>Atrapa la pelota que se impulsa sobre el balero antes de que caiga al suelo.</p>
+        <div class="info"><div>⏱️<br>1 min<br><small>Tiempo</small></div></div>
+        <div class="stage" id="st"><div class="portada"><img src="../../img/balero.jpg" alt="Balero"></div></div>
+        <p class="acciones"><label for="dif"><b>Dificultad:</b></label> <select id="dif"><option value="0">Fácil (×1 puntos)</option><option value="1" selected>Media (×1.5)</option><option value="2">Difícil (×2)</option></select></p>
+        <p class="acciones"><button class="btn" id="play">Jugar solo</button> <button class="btn o" id="online">Jugar en línea</button></p>
+        <p id="aviso" class="acciones" hidden><small>Inicia sesión en Cuenta para guardar tus puntos.</small></p>
+        <h2>Reglas</h2>
+        <ul class="rules"><li>Mueve el balero con el dedo, el mouse o las flechas ← →.</li><li>La pelota espera sobre el balero y, cada cierto tiempo, se impulsa hacia arriba.</li><li>Colócate debajo y atrápala en el balero antes de que toque el suelo.</li><li>Tienes 10 lanzamientos; cada pelota atrapada vale 3 puntos.</li><li>En Difícil se impulsa más rápido y la copa es más pequeña.</li></ul>
+      </main>
+    </div>
+  </div>
+  <script src="../../js/common.js"></script>
+  <script src="../../js/juegos/balero.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+/* Logros, recompensas y perfil */
+.av{display:inline-block;padding:4px;border-radius:50%;line-height:0;flex:none}
+.av img{width:56px;height:56px;border-radius:50%;background:#fff;object-fit:cover;display:block}
+a.btn{text-decoration:none;display:inline-block}
+.resumen{background:#fff;border:3px solid var(--azul);border-radius:10px;padding:10px;margin-bottom:10px}
+.resumen b{font-size:1.15rem}
+.tabs{display:flex;gap:6px;margin:8px 0}
+.tabs button{flex:1;padding:8px 4px;border:3px solid var(--azul);border-radius:20px;background:#fff;color:#1d2a22;font:inherit;font-size:.85rem;cursor:pointer}
+.tabs button.on{background:var(--azul);color:#fff;font-weight:bold}
+.card{display:flex;gap:10px;align-items:flex-start;background:#fff;border:2px solid var(--azul);border-radius:10px;padding:10px;margin-bottom:8px;color:#1d2a22}
+.card.done{border-color:var(--verde);background:#f0fbf3}
+.card .ic{flex:none;width:58px;text-align:center}
+.card .ic img{width:54px;height:54px;object-fit:contain}
+.card.lock .ic img{filter:grayscale(1) opacity(.45)}
+.card .tx{flex:1;min-width:0}
+.card h3{margin:0 0 2px;font-size:1rem}
+.card p{margin:2px 0;font-size:.85rem}
+.card .how{background:var(--cian);border-radius:6px;padding:3px 7px}
+.card .st{font-size:.78rem;font-weight:bold;margin-top:3px}
+.card .bar{margin:5px 0 2px}
+.card .pv{font-size:2.6rem;line-height:1}
+.card .pill{display:inline-block;background:var(--oro);border:2px solid #7a5a1a;border-radius:20px;padding:4px 10px;font-weight:bold;font-size:.8rem}
+.card .btn{padding:7px 14px;font-size:.85rem;margin-top:4px}
+.aviso{background:#fff7dc;border:2px solid var(--oro);border-radius:10px;padding:8px 10px;margin-bottom:10px;font-size:.9rem}
+.aviso a{color:var(--azul);font-weight:bold}

@@ -1,0 +1,21 @@
+# Blueprint de Render: crea el servicio web a partir de tu repositorio de GitHub.
+# (La base de datos MySQL va fuera de Render: Render no ofrece MySQL propio.)
+services:
+  - type: web
+    name: juegos-tradicionales
+    runtime: docker
+    plan: free
+    healthCheckPath: /index.html
+    envVars:
+      - key: DB_HOST
+        sync: false        # lo escribes tú en el panel de Render
+      - key: DB_PORT
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASS
+        sync: false        # secreto: nunca lo pongas en el repositorio
+      - key: DB_SSL
+        value: "true"      # Aiven y la mayoría de proveedores exigen conexión cifrada

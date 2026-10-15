@@ -1,0 +1,15 @@
+# Contraseñas y claves: NUNCA se suben a GitHub
+.env
+.env.*
+!.env.example
+
+# Archivos del sistema y del editor
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+.idea/
+
+# Copias locales de la base de datos
+database/*.local.sql
+database/*.bak.sql

@@ -1,0 +1,12 @@
+# Apache (XAMPP y Docker): protege archivos privados y evita listar carpetas
+Options -Indexes
+DirectoryIndex index.html
+
+# Nunca mostrar archivos de configuración, SQL ni scripts
+<FilesMatch "(^\.env|\.sql$|\.md$|\.ya?ml$|\.sh$|Dockerfile|\.gitignore$|\.gitattributes$)">
+    Require all denied
+</FilesMatch>
+
+# No servir carpetas internas ni de Git
+RedirectMatch 404 ^/(.*/)?\.git
+RedirectMatch 404 ^/(.*/)?(database|docker)/
